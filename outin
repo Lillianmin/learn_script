@@ -1,0 +1,9 @@
+ls >> tmp.txt
+date >> tmp.txt
+cal >> tmp.txt
+cat < tmp.txt
+cat >> tmp.txt
+tr "[a-z]" "[A-Z]"<tmp.txt>tmp.txt.upper
+sort>tmp.txt.sorted<tmp.txt
+tail -n30 < tmp.txt | head -n30>tmp.head
+sort<tmp.txt|uniq>tmp.uniq

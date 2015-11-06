@@ -1,0 +1,142 @@
+ERROR:NUMBER NOT SUPPLIED
+USAGE: ./DEMOSCR NUMBER1 NUMBER2
+DEMO
+DEMOSCR
+GINFO
+OUTIN
+OUTIN~
+READ
+TMP.TXT
+TMP.TXT.UPPER
+2011年 02月 11日 星期五 11:47:46 CST
+     二月 2011      
+一 二 三 四 五 六 日
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28                  
+                    
+MLL
+DEMO
+DEMOSCR
+GINFO
+OUTIN
+OUTIN~
+READ
+TMP.HEAD
+TMP.HEAD~
+TMP.TXT
+TMP.TXT.SORTED
+TMP.TXT.UPPER
+2011年 02月 11日 星期五 12:04:31 CST
+     二月 2011      
+一 二 三 四 五 六 日
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28                  
+                    
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+DEMO
+DEMOSCR
+GINFO
+OUTIN
+OUTIN~
+READ
+TMP.HEAD
+TMP.HEAD~
+TMP.TXT
+TMP.TXT.SORTED
+TMP.TXT.UPPER
+2011年 02月 11日 星期五 12:05:49 CST
+     二月 2011      
+一 二 三 四 五 六 日
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28                  
+                    
+2
+2
+2
+2
+2
+3
+3
+3
+3
+CHESSBOARD
+DEMO
+DEMOSCR
+ELIF
+GINFO
+ISPN
+ISPOSITIVE
+OUTIN
+PFOR10
+PFOR10~
+PFOR2
+PFOR2~
+PFOR3
+PFOR4
+PFOR4~
+PFOR5
+PFOR5~
+PFOR6
+PFOR6~
+PFOR7
+PFOR7~
+PFOR8
+PFOR8~
+PFOR9
+PFOR9~
+READ
+RMFILE
+SHOWFILE
+SOS
+TESTFOR
+TESTFOR2
+TESTFOR3
+TMP.HEAD
+TMP.TXT
+TMP.TXT.SORTED
+TMP.UNIQ
+2011年 02月 11日 星期五 15:24:07 CST
+     二月 2011      
+一 二 三 四 五 六 日
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28                  
+                    
+A
+A
+A
+B
+B
+B
+C
+C
+C
+D
+D
+D
+WO
+WO
+WO

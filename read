@@ -1,0 +1,7 @@
+#
+#Read your name
+#
+
+echo "Please input your name:"
+read yname
+echo "Hello $yname, let's be friend."

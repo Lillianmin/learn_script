@@ -1,0 +1,5 @@
+string="a"
+if [ XXX$string != XXX ]; then
+	echo "ne"
+fi
+	

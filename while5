@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#Print 5,4,3,2,1 using while
+#
+
+max=5
+while [ $max -gt 0 ]
+do
+	echo -n "$max "	
+	max=`expr $max - 1`
+done
+

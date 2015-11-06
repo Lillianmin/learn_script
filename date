@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#Show date,time,username,current directory
+#
+
+echo "Hi, $LOGNAME"
+echo "It's `date`"
+echo "User is `who am i`"
+echo "You are at `pwd`"
+

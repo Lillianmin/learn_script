@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#Add each digit of number
+#
+if [ $# -ne 1 ]; then
+	echo "Error:argument error."
+	echo "Usage:%0 number"
+	echo "Function:Add each digit of number"
+	exit 1
+fi
+
+
+number=$1
+output_number=0
+reg=0
+while [ $number -gt 0 ]; do
+	reg=`expr $number % 10`
+	output_number=`expr $output_number + $reg`
+	number=`expr $number / 10`
+done
+	echo "$output_number"
+
+

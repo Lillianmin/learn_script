@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#Calculator average value of command number
+#
+
+if [ $# -lt 2 ]; then
+	echo "Error: argument error."
+	echo "Usage: $0 num1 num2 ..."
+fi
+
+sum=0
+
+for i in $*
+do
+	sum=`expr $sum + $i`
+done
+
+echo "Average value is `expr $sum / $#`"
+

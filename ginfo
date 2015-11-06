@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+#Show who login, date and calender
+#
+while :
+do
+	echo -n ""
+#echo "Hello $USER"
+#echo "Login: " ; who | wc -l
+#echo "Dat: " ; date
+#echo "Calender: " ;
+#cal
+done
+
+trap `echo ""` 14
+
+

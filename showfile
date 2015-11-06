@@ -1,0 +1,7 @@
+#
+#Show file
+#
+if cat $1
+then
+	echo "OK! File exists and echoed"
+fi

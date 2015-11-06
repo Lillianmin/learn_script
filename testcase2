@@ -1,0 +1,35 @@
+#
+#Test case and shift
+#
+if [ $# -eq 0 ]
+then
+	echo "Error: No options from command line"
+	echo "Usage: $0 -b dst_number -n src_number"
+	echo -e "\tor $0 -n src_number -b dst_number"
+	echo "Function: Convert src_number in Demical to dst_number number system"
+	exit 1
+fi
+
+while [ -n "$1" ]
+do
+	case $1 in
+	-b)
+		ob=$2
+		case $ob in
+			2) basesystem="bin";;
+			8) basesystem="Oct";;
+			16) basesystem="Hex";;
+			10) basesystem="Dec";;
+			*) basesystem="Unkown";;
+		esac
+		shift 2;;
+	-n)
+		num=$2
+		shift 2;;
+	*)
+		echo "$0 doesn't recognize option $1 "
+		exit 1;;
+	esac
+done
+output=`echo "obase=$ob; ibase=10; $num;" | bc`
+echo "$num Decimal number = $output in $basesystem number system($ob)"

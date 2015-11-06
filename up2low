@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#Change current directory's filename from upper to lower
+#
+
+AWKNAME="up2low.awk"
+AWKPATH="./"
+AWKFILE=$AWKPATH$AWKNAME
+ls -1 > /tmp/filename0.$$
+
+tr [A-Z] [a-z] < /tmp/filename0.$$ > /tmp/filename1.$$
+
+paste /tmp/filename0.$$ /tmp/filename1.$$ > /tmp/filename.$$
+
+awk -f $AWKFILE < /tmp/filename.$$
+
+rm -f /tmp/filename0.$$
+rm -f /tmp/filename1.$$
+rm -f /tmp/filename.$$
+
+
+
+
+

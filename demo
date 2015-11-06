@@ -1,0 +1,9 @@
+#
+#Demo about $@ and $*
+#
+
+echo "Number of args:$#"
+echo "Command: $0"
+echo "First arg: $1"
+echo "Second arg: $2"
+echo -e "All args:\n $@ \n $*"

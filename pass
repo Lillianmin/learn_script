@@ -1,0 +1,13 @@
+#
+#Function demo
+#
+function demo ()
+{
+	echo "Number of args: $#"
+	echo "Arg1: $1"
+	echo "Arg2: $2"
+	echo "arg3: $3"
+	return;
+}
+
+demo -f a b 

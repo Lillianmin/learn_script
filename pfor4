@@ -1,0 +1,13 @@
+for ((i=1; i<=5; i++))
+do
+	for (( j=1; j <= $i; j++ ))
+	do
+	if [ $j -ne $i ]
+	then
+		echo -n "| "
+	else 
+		echo -n "|"
+	fi
+	done
+	echo "_"
+done

@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+#An example to cal real number in shell
+#
+
+a=5.44
+b=3.77
+c=`echo "$a + $b" | bc`
+echo "$a + $b = $c"

@@ -1,0 +1,4 @@
+A	good	a
+B	good	b
+C	normal	c
+D	ok	d	

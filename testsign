@@ -1,0 +1,62 @@
+#
+#test sign
+#
+function interupt()
+{
+	echo "Ctrl + C pressed. Removing /tmp/input.$$"
+	rm "/tmp/input.$$" -f
+	exit 1
+}
+
+function getinput()
+{
+	clear
+	no=0
+	echo "Appointment application"	
+	echo "Input your infomation filename:"
+	read filename
+	if [ ! -f $filename ]
+	then
+		echo "File not exists. Creating $filename..."
+		echo "Appointment information keeps in $filename"
+	fi
+	echo "Ceate `date`" > /tmp/input.$$
+	
+	while :
+	do
+	echo "Appointment title:"
+	read title
+	echo "time:"
+	read time
+	echo "Remark:"
+	read mark
+
+	echo "Is data ok? (y/n)"
+	read yn
+	if [ $yn = y -o $yn = Y ]
+	then
+		echo "$no $title $time $mark" >> /tmp/input.$$
+		no=`expr $no + 1`
+	elif [ $yn != n -a $yn != N ]
+	then
+		echo "Is data ok? (y/n)"
+	fi
+			
+	echo "Add one more information?(y/n)"
+	read yno
+	if [ $yno = n -o $yno = N ]
+	then
+		cat /tmp/input.$$ >> $filename
+		rm /tmp/input.$$ -f
+		return
+	elif [ $yno != y -a $yno != Y ]
+	then
+		echo "Add one more information?(y/n)"
+	fi
+	done
+}
+
+trap interupt 2
+getinput
+
+

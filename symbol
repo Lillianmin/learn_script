@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#Add * to arg 1 if arg1 doesn't have * symbo
+#
+
+if [ $# -lt 1 ]; then
+	echo "Usage: $0 arg1"
+	exit 1
+fi
+
+cat "$1" > /tmp/file.$$ 2>/tmp/file0.$$
+grep "*" /tmp/file.$$ > /tmp/file0.$$
+
+if [ $? -eq 0 ]; then
+	echo "Don't need to add symbol."
+else
+	echo "Need to add symbol. e.g.$1/*"
+fi
+
+rm -f /tmp/file.$$
+rm -f /tmp/file0.$$

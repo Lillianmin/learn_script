@@ -1,0 +1,16 @@
+#
+#Number is positive or negative
+#
+if [ $# -eq 0 ]
+then
+	echo "i$0: You must input a number."
+	echo "Usage: ./ispn number"
+	exit 1;
+fi
+
+if test $1 -gt 0
+then
+	echo "$1 is positive"
+else
+	echo "$1 is negative"
+fi

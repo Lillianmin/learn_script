@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#Add two num 
+#
+
+if [ $# -ne 2 ]; then
+	echo "Error: need two number."
+	echo "Usage: $0 number1 number2"
+	echo "Function: add two number"
+	exit 1
+else
+	sum=`expr $1 + $2`
+	echo "$1 + $2 = $sum"
+fi
+
+

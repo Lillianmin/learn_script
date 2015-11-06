@@ -1,0 +1,19 @@
+#
+#Select a OS
+#
+echo "1. Ubunt"
+echo "2. Debain"
+echo -n "Please select the OS you like [1 or 2]?"
+read ostp
+
+if [ $ostp -eq 1 ]
+then
+	echo "You select Ubunt"
+else
+	if [ $ostp -eq 2 ]
+	then
+		echo "You select Debian"
+	else
+		echo "Why don't you like Linux"
+	fi
+fi

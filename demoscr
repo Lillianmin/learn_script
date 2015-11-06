@@ -1,0 +1,14 @@
+#
+#Demo if, output, input
+#
+
+if [ $# -ne 2 ]
+then
+	echo "Error:Number not supplied" 1>&2
+	echo "Usage: ./demoscr number1 number2" 1>&2
+	exit 1
+fi
+ans=`expr $1 + $2`
+echo "Sum is $ans"
+
+

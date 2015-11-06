@@ -1,0 +1,16 @@
+#
+#Test case
+#
+if [ -z $1 ]
+then
+	rental="Unkown car"
+elif [ -n $1 ]
+then
+	rental=$1
+fi
+
+case $rental in
+	car) echo "$rental";;
+	jeep) echo "$rental";;
+	*) echo "defualt: $rental";;
+esac

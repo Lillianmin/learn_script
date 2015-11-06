@@ -1,0 +1,8 @@
+for i in 1 2 3 4 5
+do
+	for (( j=1; j <= $i; j++ ))
+	do
+		echo -e -n "* "
+	done
+	echo ""
+done

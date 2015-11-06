@@ -1,0 +1,7 @@
+#
+#Remove file
+#
+if rm $1
+then
+	echo "File $1 deleted"
+fi

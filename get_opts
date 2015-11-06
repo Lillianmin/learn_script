@@ -1,0 +1,88 @@
+#!/bin/bash
+# -c clear
+# -d dir
+# -m mc
+# -e vi 
+#
+#getopts
+
+help_func() {
+	   echo "Usage: $0 -c -d -m -e {editor name}"; 
+	   echo "Where -c clear the screen";
+	   echo "      -d show dir";
+	   echo "      -m start midnight commander shell";
+	   echo "      -e {editor}, start {editor} of your choice";
+	   return
+}
+
+clear_func() {
+	clear
+	echo "clear screen, press any key to continue..."
+	read
+	return
+}
+
+dir_func() {
+	ls
+	echo "list file, press any key to continue..."
+	read
+	return
+}
+
+editor_func() {
+	editor_name=$1
+	which $editor_name > /dev/null
+	if [ `echo $?` -eq 0 ]; then
+		$editor_name
+		echo "$editor_name, press a key ..."
+		read
+	else 
+		echo "Editor $editor_name is not installed or exist. Press a key..."
+		read
+	fi
+	return
+}
+
+mc_func() {
+	which mc > /dev/null
+	if [ `echo $?` -eq 0 ]; then
+		mc
+		echo "Midnight commander. Press a key..."
+		read
+	else
+		echo "mc is not installed. Press a key..."
+		read 
+	fi	
+	return
+}
+
+#get_opts () {
+#Do not put getopts in function for getopts get options from command.
+#If you put getopts in function, it's get options from function argument, you should give arguments to function.
+#Right
+while getopts cdme: opt 
+#Wrong
+#while getopts c:d:m:e: opt
+#vi not work
+#while getopts c:d:m:e opt
+do
+	echo "opt=$opt optarg=$OPTARG"
+	case "$opt" in 
+		c) clear_func;;
+		d) dir_func;;
+		m) mc_func;; 
+		e) echo "editor_func."; ena="$OPTARG"; editor_func $ena ;;
+		\?) help_func; exit 1;;
+	esac
+done
+#}
+
+#if [ $# -ne 0 ]; then
+if [ $# -eq 0 ]; then
+	help_func
+	exit 1
+#else 
+#	get_opts -c -d -m -e vim
+fi
+
+
